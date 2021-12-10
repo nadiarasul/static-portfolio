@@ -1,13 +1,111 @@
 /* apply a natural box layout model to all elements, but allowing components to change */
 html {
-    box-sizing: border-box;
-  }
-  *, *:before, *:after {
-    box-sizing: inherit;
-  }
+	box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
 
-
+:root {
+	--green: #014040;
+	--pink: #fdf0e8;
+	--grey: #f1f1f1;
+	--white: #ffffff;
+}
 /* Start Styles */
-.c-contact {
-    
+.unstyled-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: start;
+	align-items: center;
+}
+
+.unstyled-list li {
+	margin-left: 15px;
+}
+
+/* Fonts */
+body {
+	font-family: "Source Sans Pro", Sans-Serif;
+	background-color: var(--white);
+	margin: 0;
+	background-color: var(--pink);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: "Playfair Display", Serif;
+	font-style: italic;
+}
+
+h1 {
+	font-size: 2.4rem;
+}
+
+h2 {
+	font-size: 2rem;
+}
+
+h3 {
+	font-size: 1.8rem;
+}
+
+a {
+	color: var(--green);
+}
+
+a:focus {
+	outline-color: var(--green);
+	text-decoration: none;
+}
+
+header {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 0 40px;
+}
+
+section,
+footer {
+	padding: 60px 40px;
+}
+
+.row {
+	max-width: 75rem;
+}
+
+.content {
+	max-width: 750px;
+	margin: 0 auto;
+}
+
+.sr-only {
+	position: absolute !important;
+	width: 1px !important;
+	height: 1px !important;
+	padding: 0 !important;
+	overflow: hidden !important;
+	clip: rect(0, 0, 0, 0) !important;
+	white-space: nowrap !important;
+	border: 0 !important;
+}
+.social-icon {
+	margin-right: 10px;
+	display: inline-block;
+}
+
+.social-icon svg {
+	width: 40px;
+	height: 40px;
 }
